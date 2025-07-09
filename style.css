@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: url('buldum.jpeg') no-repeat center center / cover;
+  color: white;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.sol {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+.sag {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.sag li a button {
+  padding: 5px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  background: white;
+  color: black;
+  font-weight: bold;
+}
+
+.sag li a button:hover {
+  background: transparent;
+  color: white;
+
+  transform: scale(1.1);
+}
+
+.paragraf {
+  padding: 40px;
+  text-align: center;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.paragraf h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.paragraf p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15vh, 1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  padding: 20px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+/* --- Mevcut CSS burada --- */
+
+/* Mobil ve küçük ekranlar için: */
+@media (max-width: 768px) {
+  body {
+    height: auto; /* Yüksekliği otomatik yap */
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .sag {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sag li a button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 18px;
+    border-radius: 30px;
+  }
+
+  /* Paragraf kutularını stacked (üst üste) yap ve genişliği azalt */
+  .paragraf, 
+  .paragraf-lefke, 
+  .paragraf-girne, 
+  .paragraf-magusa, 
+  .paragraf-lefkosa {
+    position: static !important;
+    width: 90% !important;
+    max-width: 100% !important;
+    margin: 20px auto;
+    border-radius: 20px;
+    padding: 15px;
+    transform: none !important;
+  }
+
+  /* Yazı font büyüklüğünü biraz küçült */
+  .paragraf, 
+  .paragraf-lefke, 
+  .paragraf-girne, 
+  .paragraf-magusa, 
+  .paragraf-lefkosa {
+    font-size: 1rem;
+  }
+
+  /* Footer hep altta kalsın */
+  .footer {
+    position: relative;
+    padding: 20px 10px;
+  }
+}
+
