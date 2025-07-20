@@ -1,0 +1,262 @@
+/* Genel Sıfırlama */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  background: url("buldum.jpeg") no-repeat center center / cover;
+  color: white;
+}
+
+/* Ana Yapı */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Üst Menü */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.sol {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  cursor: pointer;
+}
+
+.sag {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  position: relative;
+  margin-right: 30px;
+}
+
+.sag li {
+  position: relative;
+}
+
+.dropdown > button {
+  width: 120px;
+  height: 40px;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  background: white;
+  color: black;
+  font-weight: bold;
+}
+
+.dropdown > button:hover {
+  background: transparent;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Dropdown Menü */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  z-index: 1000;
+  min-width: 160px;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 5px 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Açıklama Alanı */
+.paragraf {
+  padding: 40px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.paragraf h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.paragraf p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Kartlar */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+.cards a {
+  text-decoration: none;
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  padding: 20px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  border: 4px solid white;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Ayırıcı Çizgi */
+.separator {
+  width: 90%;
+  height: 2px;
+  background-color: black;
+  margin: 40px auto;
+}
+
+/* Alt Bilgi */
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
+  font-size: medium;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Mobil Uyum (Responsive) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .sag {
+    flex-direction: row;
+    gap: 10px;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .sag li {
+    margin: 5px;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown > button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background-color: white;
+    margin-top: 5px;
+  }
+
+  .dropdown-menu li a {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+
+  .paragraf h1 {
+    font-size: 2rem;
+  }
+
+  .paragraf p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .card {
+    height: auto;
+    padding: 15px;
+  }
+
+  .card h2 {
+    font-size: 1.5rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+
+  .sol {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.paragraf {
+  padding: 40px;
+  text-align: center;
+  background-color: rgba(0,0,0,0.2);
+}
+.paragraftarih {
+  
+  margin-top: 100px;
+  text-align: center;
+  
+}
+.paragraftarih h1 {
+  font-size: 2.5rem;
+  color: white;
+   background-color: rgba(0,0,0,0.2);
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 40px;
+}
+.paragraftarih p {
+  font-size: 1.0rem;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px ;
+  margin-top: 20px;
+}
+
+.paragraf h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.paragraf p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: white;
+}
+.wrapper {
+    background-color: #f5e7cd;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 550vh;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.menu-button {
+  font-weight: bold;
+  position: absolute;
+  bottom: -63px;
+  left: 0px;
+  padding: 20px 50px;
+  background-color:white !important;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 5px;
+}
+
+.menu-button:hover {
+   background-color: rgba(255, 255, 255, 0.7);
+  color: #000;
+}
+.ayirici {
+  border: none;
+  border-top: 3px solid #333; /* çizgi rengi ve kalınlığı */
+  margin-top: 110px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%; /* sayfanın ne kadarını kaplayacak */
+}
+
+.konum-button {
+  font-weight: bold;
+  position: absolute;
+  bottom: -63px;
+  left: 180px;
+  padding: 20px 50px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 5px;
+}
+.konum-button:hover{
+   background-color: rgba(255, 255, 255, 0.7);
+  color: #000;
+}
+
+.sol {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  cursor: pointer;
+}
+
+.sag {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.sag li a button {
+  width: 120px;
+  height: 40px;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  background: white;
+  color: black;
+  font-weight: bold;
+}
+
+.sag li a button:hover {
+  background: transparent;
+  color: white;
+
+  transform: scale(1.1);
+}
+
+.cards {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* min boyutu sabit tutar */
+  gap: 30px;
+   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  
+ 
+}
+.cards a{
+  text-decoration: none;
+}
+
+
+.card {
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* min boyutu sabit tutar */
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  padding: 20px;
+  height: 350px;
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  flex-direction: column;
+  border: 4px solid white;
+  
+  position: relative;
+  margin-left: 40px;
+  margin-top: 50px;
+  
+}
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+.card:hover {
+  transform: scale(1.05);
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.bolum-baslik {
+  height: 2px;
+  background-color: #999; /* Dilersen #000 ya da başka renk */
+  margin: 40px 0; /* Yukarıdan ve aşağıdan boşluk */
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+
+}
+
+
+
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 7px;
+  margin-top: auto;
+  font-size: medium;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+/* --- Mevcut CSS burada --- */
+
+/* Mobil ve küçük ekranlar için: */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .card {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .menu-button,
+  .konum-button {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin: 10px 5px;
+    display: inline-block;
+  }
+
+  .card h2 {
+    font-size: 1.4rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sol {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .sag {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .sag li a button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
